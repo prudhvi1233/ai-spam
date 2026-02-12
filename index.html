@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>AI Spam Email Clarifier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left: Input -->
+        <div class="left-panel">
+            <h1 class="title">AI Spam Email Clarifier</h1>
+            <p class="subtitle">Paste suspicious email text and let AI classify it as spam or safe.</p>
+            <p class="tagline">Uses a text classification model (e.g., Naive Bayes, BERT, or external AI API) to detect spam patterns. [Demo only]</p>
+
+            <label for="emailText" class="label">Email content</label>
+            <textarea id="emailText" placeholder="Paste the email text here..."></textarea>
+
+            <div class="controls">
+                <button id="analyzeBtn" class="btn btn-primary">🔍 Analyze with AI</button>
+                <button id="clearBtn" class="btn btn-secondary">✖ Clear</button>
+                <span class="api-info">Backend/AI API URL goes in the script.</span>
+            </div>
+        </div>
+
+        <!-- Right: Result -->
+        <div class="right-panel">
+            <div>
+                <div class="status-pill" id="statusPill">Idle • waiting for input</div>
+
+                <div class="result-box">
+                    <div class="result-label">Classification result</div>
+                    <div class="result-main">
+                        <div class="badge badge-unknown" id="resultBadge">Unknown</div>
+                        <div class="confidence" id="confidenceText">Confidence: --</div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="confidenceBar"></div>
+                    </div>
+                </div>
+
+                <div class="result-box">
+                    <div class="result-label">Why this decision?</div>
+                    <p class="explanation" id="explanationText">
+                        The AI will highlight spam indicators once you analyze an email.
+                    </p>
+                    <div class="reason-tags" id="reasonTags">
+                        <span class="reason-tag">No analysis yet</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="footer">
+                This is a front-end prototype. Connect it to your own spam-classification model or an <span>AI text classification API</span>.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
