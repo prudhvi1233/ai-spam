@@ -1,3 +1,43 @@
-h1{
-    text allignment: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+}
+
+.hero{
+    text-align: center;
+}
+
+.main-heading{
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow: 0 0 10px #ff004c, 0 0 20px #ff004c;
+    }
+    to{
+        text-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea;
+    }
+}
+
+.joker-img{
+    width: 250px;
+    transition: transform 0.2s linear;
+    filter: drop-shadow(0 0 20px #00ffea);
 }
